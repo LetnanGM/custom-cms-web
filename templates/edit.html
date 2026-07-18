@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: block;
+      justify-content: space-between;
+    }
+
+    .border-black {
+      border: 4px solid black;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Update Article</h1>
+      <form action="/edit/go/{{ id }}" method="post">
+        <label for="judul">Title : </label><br />
+        <input
+          type="text"
+          id="judul"
+          name="judul"
+          required
+          class="border-black"
+          value="{{ judul }}"
+        /><br />
+
+        <label for="content">content : </label><br />
+        <textarea name="content" id="content" required rows="8" cols="50">
+{{ article }}</textarea
+        ><br />
+
+        <button type="submit">+ Update</button>
+      </form>
+    </div>
+  </body>
+</html>

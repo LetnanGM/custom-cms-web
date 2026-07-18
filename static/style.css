@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.header-artikel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.in-right {
+  display: flex;
+  justify-content: flex-end;
+}

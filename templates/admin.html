@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Personal Blog</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Personal Blog</h1>
+
+    <a href="/new" class="in-right" role="button">New +</a>
+    <ul>
+      {% for article in articles %}
+      <li class="header-artikel">
+        <a href="/article/{{ article['id'] }}"
+          ><h2>{{ article['judul'] }}</h2></a
+        >
+        <div>
+          <a href="/edit/{{ article['id'] }}" role="button">Edit</a>
+          <a href="" role="button">Delete</a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
